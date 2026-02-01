@@ -59,15 +59,15 @@ defineProps({
 
         <!-- Follwering -->
          <div class="flex-1 py-4 text-center  ">
-            <p class="text-gray-400 tect-gray-400 text-sm">{{ followers }}</p>
-            <p class="text-xl font-bolde text-gray-800">548</p>
+            <p class="text-gray-400 tect-gray-400 text-sm">Follwering</p>
+            <p class="text-xl font-bolde text-gray-800">{{ following }}</p>
          </div>
 
          <!-- Projects -->
 
          <div class="flex-1 py-4 text-center  ">
-            <p class="text-gray-400 tect-gray-400 text-sm">{{ followers }}</p>
-            <p class="text-xl font-bolde text-gray-800">12</p>
+            <p class="text-gray-400 tect-gray-400 text-sm">Projects</p>
+            <p class="text-xl font-bolde text-gray-800">{{ projects }}</p>
          </div>
      </div>
   </div>
