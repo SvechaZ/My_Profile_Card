@@ -1,6 +1,8 @@
 <script setup>
-    const background = '/ที่อยู่หมอ.jpg'
-    const profileImg = '/หมอGPT.jpg'
+    // const background = '/ที่อยู่หมอ.jpg'
+    // // const profileImg = '/หมอGPT.jpg'
+    // const profileImg = '/หมอGPT.jpg'
+    
 defineProps({
   background: String,
   profileimg: String,
@@ -8,14 +10,18 @@ defineProps({
   subheading: String,
   followers: String,
   following: String,
-  projects: String
+  projects: String,
+  facebook: String,
+  instagram: String
 })
 
 </script>
 
 <template>
   <!-- Card -->
-  <div class="bg-white shadow-lg rounded-2xl overflow-hidden text-center max-w-sm mx-auto">
+  <div class="bg-white shadow-xl rounded-2xl overflow-hidden text-center w-[360px]">
+
+
     
     <!-- Header -->
     <div
@@ -23,9 +29,9 @@ defineProps({
       :style="{ backgroundImage: `url(${background})` }"
     >
       <img
-        :src="profileImg"
+        :src="profileimg"
         alt="Profile Image"
-        class="w-32 h-32 rounded-full object-cover border-[4px] border-white
+        class="max-w-md w-32 h-32 rounded-full object-cover border-[4px] border-white
                absolute top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       />
     </div>
@@ -35,6 +41,14 @@ defineProps({
       <h2 class="font-bold text-gray-800 text-2xl mb-2">{{ name }}</h2>
       <h3 class="text-gray-600 text-lg">{{ subheading }}</h3>
     </div>
+
+    <!-- social -->
+
+   <div class="px-6 pb-4 flex justify-center gap-6">
+  <a :href="facebook || '#'" target="_blank" class="text-blue-600 hover:underline"> Facebook</a>
+
+  <a :href="instagram || '#'" target="_blank" class="text-pink-500 hover:underline">Instagram</a>
+  </div>
     <!-- Status -->
      <div class="flex border-t border-gray-200">
         <!-- Followers -->
